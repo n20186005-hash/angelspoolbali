@@ -2,7 +2,7 @@
  * Style reminder: Tide Field Guide — photographic coastline + asymmetric field labels; Indonesian is primary, English is fully parallel.
  */
 import { useEffect, useState } from "react";
-import { AlertTriangle, ArrowDownRight, Bath, BatteryCharging, CarFront, ChevronDown, CircleParking, Clock3, Compass, Landmark, MapPin, ShipWheel, Store, UtensilsCrossed, Wifi } from "lucide-react";
+import { AlertTriangle, ArrowDownRight, ArrowUpRight, Bath, BatteryCharging, CarFront, ChevronDown, CircleParking, Clock3, Compass, Landmark, MapPin, ShipWheel, Store, UtensilsCrossed, Wifi } from "lucide-react";
 import CookieBanner from "@/components/CookieBanner";
 import photoHero from "../../../assets/angels-billabong-real.jpeg";
 import photoCoast from "../../../assets/nusa-penida-coast-1.jpg";
@@ -143,7 +143,7 @@ export default function Home() {
         <section className="hero">
           <img className="hero-photo" src={photoHero} alt={language === "id" ? "Kolam batu Angel’s Billabong di pesisir Nusa Penida" : "Angel’s Billabong rock pool on the Nusa Penida coast"} />
           <div className="hero-wash" />
-          <div className="hero-grid"><p className="hero-location"><MapPin size={15} /> {t.location}</p><div className="hero-content"><p className="eyebrow light">NUSA PENIDA · BALI</p><h1>Angel’s<br /><em>Billabong</em></h1><p>{t.heroLead}</p><a className="coral-button" href="#visit">{t.explore} <ArrowDownRight size={17} /></a></div><p className="hero-index">07° 8′ S · 115° 27′ E</p></div>
+          <div className="hero-grid"><p className="hero-location"><MapPin size={15} /> {t.location}</p><div className="hero-content"><p className="eyebrow light">NUSA PENIDA · BALI</p><h1><span className="hero-title-line">Angel’s</span><span className="hero-title-line hero-title-line--accent"><em>Billabong</em></span></h1><p>{t.heroLead}</p><a className="coral-button" href="#visit">{t.explore} <ArrowDownRight size={17} /></a></div><p className="hero-index">07° 8′ S · 115° 27′ E</p></div>
         </section>
 
         <section className="safety-band" aria-label={t.safetyLabel}>
@@ -187,7 +187,7 @@ export default function Home() {
         </section>
 
         <section className="section map-section" id="map" data-field="LOCATION · 06">
-          <div className="map-copy"><p className="eyebrow">{t.mapKicker}</p><h2>{t.mapTitle}</h2><p>{language === "id" ? "Peta membantu orientasi awal. Di lokasi, tanda keselamatan dan arahan petugas selalu lebih diutamakan daripada rencana digital." : "The map helps with initial orientation. On site, safety signs and staff directions always take priority over a digital plan."}</p><a href="https://maps.app.goo.gl/q5r1R672tXpLuvRP8" target="_blank" rel="noreferrer" className="map-link">Google Maps <ArrowDownRight size={16} /></a></div>
+          <div className="map-copy"><p className="eyebrow">{t.mapKicker}</p><h2>{t.mapTitle}</h2><p>{language === "id" ? "Peta membantu orientasi awal. Di lokasi, tanda keselamatan dan arahan petugas selalu lebih diutamakan daripada rencana digital." : "The map helps with initial orientation. On site, safety signs and staff directions always take priority over a digital plan."}</p><a href="https://maps.app.goo.gl/q5r1R672tXpLuvRP8" target="_blank" rel="noreferrer" className="map-link">Google Maps <ArrowUpRight size={16} /></a></div>
           <div className="map-frame"><iframe title="Peta Angel’s Billabong" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6819.068146832992!2d115.44639851246426!3d-8.733500291280242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd26f817e9cb20b%3A0x168ba6d3daf31579!2sAngel&#39;s%20Billabong!5e1!3m2!1szh-CN!2sjp!4v1787147316011!5m2!1szh-CN!2sjp" width={600} height={450} style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" /></div>
         </section>
 
