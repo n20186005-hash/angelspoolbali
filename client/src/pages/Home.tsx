@@ -4,12 +4,15 @@
 import { useEffect, useState } from "react";
 import { AlertTriangle, ArrowDownRight, Bath, BatteryCharging, CarFront, ChevronDown, CircleParking, Clock3, Compass, Landmark, MapPin, ShipWheel, Store, UtensilsCrossed, Wifi } from "lucide-react";
 import CookieBanner from "@/components/CookieBanner";
+import photoHero from "../../../assets/angels-billabong-real.jpeg";
+import photoCoast from "../../../assets/nusa-penida-coast-1.jpg";
+import photoCliff from "../../../assets/nusa-penida-coast-2.jpg";
+import brandMark from "../../../assets/angels-billabong-brand-mark.png";
+import safetySwell from "../../../assets/safety-swell.png";
+import limestoneSection from "../../../assets/limestone-section.png";
+import tidalContours from "../../../assets/tidal-contours.png";
 
 type Language = "id" | "en";
-
-const photoHero = "/manus-storage/angels-billabong-real_c25fb3c0.jpeg";
-const photoCoast = "/manus-storage/nusa-penida-coast-1_ee3fe93b.jpg";
-const photoCliff = "/manus-storage/nusa-penida-coast-2_fa194673.jpg";
 
 const copy = {
   id: {
@@ -131,7 +134,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <header className="topbar">
-        <a className="brand" href="#top" aria-label="Angel’s Billabong home"><img src="/manus-storage/angels-billabong-brand-mark_3dfa352f.png" alt="" /><span>Angel’s<br />Billabong</span></a>
+        <a className="brand" href="#top" aria-label="Angel’s Billabong home"><img src={brandMark} alt="" /><span>Angel’s<br />Billabong</span></a>
         <nav aria-label="Primary navigation">{t.nav.map((item, index) => <a href={["#about", "#visit", "#access", "#map", "#faq"][index]} key={item}>{item}</a>)}</nav>
         <div className="lang-toggle" aria-label="Language"><button className={language === "id" ? "active" : ""} onClick={() => setLanguage("id")}>ID</button><button className={language === "en" ? "active" : ""} onClick={() => setLanguage("en")}>EN</button></div>
       </header>
@@ -144,7 +147,7 @@ export default function Home() {
         </section>
 
         <section className="safety-band" aria-label={t.safetyLabel}>
-          <div className="safety-icon"><AlertTriangle size={25} /></div><div><p className="eyebrow coral">{t.safetyLabel}</p><h2>{t.safetyTitle}</h2></div><p>{t.safetyText}</p><img src="/manus-storage/safety-swell_cff1296c.png" alt="" />
+          <div className="safety-icon"><AlertTriangle size={25} /></div><div><p className="eyebrow coral">{t.safetyLabel}</p><h2>{t.safetyTitle}</h2></div><p>{t.safetyText}</p><img src={safetySwell} alt="" />
         </section>
 
         <aside className="field-protocol" aria-label={t.protocolTitle}><span>△</span><div><p className="eyebrow coral">FIELD PROTOCOL · 00</p><h2>{t.protocolTitle}</h2></div><p>{t.protocolText}</p></aside>
@@ -153,7 +156,7 @@ export default function Home() {
           <div className="section-rail"><span>01</span><div /><span>{t.fieldNote}</span></div>
           <div className="about-copy"><p className="eyebrow">{t.fieldNote}</p><h2>{t.aboutTitle}</h2><p>{t.aboutText}</p></div>
           <div className="fact-list">{t.facts.map(([label, value]) => <div className="fact" key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>
-          <figure className="side-art"><img src="/manus-storage/limestone-section_03d1a8fc.png" alt="" /><figcaption>{language === "id" ? "Bentuk batu pesisir berubah bersama pasang surut." : "Coastal rock forms change with the tide."}</figcaption></figure>
+          <figure className="side-art"><img src={limestoneSection} alt="" /><figcaption>{language === "id" ? "Bentuk batu pesisir berubah bersama pasang surut." : "Coastal rock forms change with the tide."}</figcaption></figure>
         </section>
 
         <section className="section interpret-section" data-field="LANDSCAPE NOTE · 01A">
@@ -162,7 +165,7 @@ export default function Home() {
         </section>
 
         <section className="section visit-section" id="visit" data-field="TIDE WINDOW · 02">
-          <div className="section-heading"><p className="eyebrow">{t.visitKicker}</p><h2>{t.visitTitle}</h2><img src="/manus-storage/tidal-contours_ddb41d0b.png" alt="" /></div>
+          <div className="section-heading"><p className="eyebrow">{t.visitKicker}</p><h2>{t.visitTitle}</h2><img src={tidalContours} alt="" /></div>
           <aside className="tide-note"><AlertTriangle size={18} /><div><p>{t.observeLabel}</p><strong>{t.observeText}</strong></div></aside>
           <div className="visit-cards">{t.visitCards.map(([title, text], i) => <article key={title} className="visit-card"><span>0{i + 1}</span><Clock3 size={23} /><h3>{title}</h3><p>{text}</p></article>)}</div>
         </section>
@@ -193,7 +196,7 @@ export default function Home() {
         <section className="references-section"><p>{t.references}</p><a href="https://nusapenida.org/broken-beach-angel-billabong/" target="_blank" rel="noreferrer">Nusa Penida guide</a><a href="https://nusapenida.org/how-to-get-to-nusa-penida-from-bali/" target="_blank" rel="noreferrer">Bali–Penida crossing guide</a><a href="https://nusapenida.org/get-around-nusa-penida/" target="_blank" rel="noreferrer">Island transport guide</a></section>
       </main>
 
-      <footer className="footer"><div className="footer-brand"><img src="/manus-storage/angels-billabong-brand-mark_3dfa352f.png" alt="" /><span>Angel’s Billabong<br /><em>Field Guide</em></span></div><div><p>{t.footer}</p><p>{t.footerResearch}</p><p className="photo-note">{t.photoNotice}</p></div><div className="footer-links"><a href="/privacy">{t.privacy}</a><a href="/terms">{t.terms}</a><a href="/cookie">{t.cookies}</a></div><p className="copyright">© 2026 Angel’s Billabong · Klungkung, Bali</p></footer>
+      <footer className="footer"><div className="footer-brand"><img src={brandMark} alt="" /><span>Angel’s Billabong<br /><em>Field Guide</em></span></div><div><p>{t.footer}</p><p>{t.footerResearch}</p><p className="photo-note">{t.photoNotice}</p></div><div className="footer-links"><a href="/privacy">{t.privacy}</a><a href="/terms">{t.terms}</a><a href="/cookie">{t.cookies}</a></div><p className="copyright">© 2026 Angel’s Billabong · Klungkung, Bali</p></footer>
       <CookieBanner />
     </div>
   );
