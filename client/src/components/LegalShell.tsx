@@ -4,6 +4,7 @@
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
+import brandMark from "../../../assets/angels-billabong-brand-mark.png";
 
 export type SiteLanguage = "id" | "en";
 
@@ -32,7 +33,7 @@ export default function LegalShell({ page, children }: Props) {
     <main className="legal-page">
       <header className="legal-header">
         <Link href="/" className="legal-brand">
-          <img src="/manus-storage/angels-billabong-brand-mark_3dfa352f.png" alt="" />
+          <img src={brandMark} alt="" />
           <span>Angel’s Billabong</span>
         </Link>
         <div className="lang-toggle" aria-label="Language">
