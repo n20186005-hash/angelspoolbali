@@ -23,17 +23,17 @@ const copy = {
     protocolTitle: "Protokol lapangan: berhenti, amati, putuskan.", protocolText: "Sebelum meninggalkan parkir, lihat kondisi laut dari jalur atas. Jangan memakai sesi foto, jadwal kapal, atau kolam yang terlihat tenang sebagai alasan untuk melintasi pembatas. Sisakan waktu untuk kembali ke kendaraan dan pelabuhan sebelum cahaya berkurang.",
     explore: "Rencanakan kunjungan", location: "Sakti, Nusa Penida · Klungkung, Bali", 
     heroLead: "Kolam batu alami di tepi samudra, dibentuk erosi dan paling baik dipahami dari jarak yang aman.",
-    fieldNote: "CATATAN LAPANGAN 01", aboutTitle: "Kolam pasang surut yang dibingkai batu kapur.",
-    aboutText: "Angel’s Billabong berada di pesisir barat Nusa Penida, berdekatan dengan Broken Beach. Cekungan batu ini terhubung dengan laut terbuka; ketika kondisi laut tenang, permukaannya tampak seperti kolam tanpa tepi. Karakter alamnya justru menuntut kewaspadaan—gelombang dapat menyapu area batu tanpa banyak peringatan.",
+    fieldNote: "CATATAN LAPANGAN 01", aboutTitle: "Tentang Angel’s Billabong",
+    aboutText: "Angel’s Billabong, Nusa Penida, berada di pesisir barat pulau, berdekatan dengan Broken Beach. Cekungan batu ini terhubung dengan laut terbuka; ketika kondisi laut tenang, permukaannya tampak seperti kolam tanpa tepi. Karakter alamnya justru menuntut kewaspadaan—gelombang dapat menyapu area batu tanpa banyak peringatan.",
     facts: [["Wilayah", "Sakti, Kecamatan Nusa Penida"], ["Tipe lanskap", "Kolam batu pesisir & tebing"], ["Kunjungi bersama", "Broken Beach / Pasih Uug"], ["Prinsip utama", "Amati dari area yang aman"]],
-    visitKicker: "SEBELUM BERANGKAT", visitTitle: "Sesuaikan rencana dengan laut, bukan sebaliknya.",
+    visitKicker: "SEBELUM BERANGKAT", visitTitle: "Merencanakan Kunjungan ke Angel’s Billabong",
     visitCards: [
       ["Waktu terbaik", "Datang pagi atau sore untuk cahaya yang lebih lembut dan sirkulasi pengunjung yang biasanya lebih nyaman. Kondisi air tetap menjadi penentu utama."],
       ["Durasi", "Sisihkan sekitar 1–2 jam untuk Angel’s Billabong dan Broken Beach, termasuk berjalan dari parkir dan berhenti di sudut pandang."],
       ["Tiket & biaya", "Retribusi kecil serta parkir dapat berlaku dan berubah. Bawa uang tunai secukupnya; konfirmasi nominal dan akses di lokasi."],
       ["Parkir", "Parkir umum berada dekat titik akses. Gunakan jalur pejalan kaki yang tersedia, kunci kendaraan, dan jangan menghalangi pintu masuk."],
     ],
-    accessKicker: "AKSES DI PULAU", accessTitle: "Kapal membawa Anda ke Nusa Penida. Jalan pulau membawa Anda ke tepi batu.",
+    accessKicker: "AKSES DI PULAU", accessTitle: "Cara Menuju Angel’s Billabong, Nusa Penida",
     routes: [
       ["01 · Bandara → pelabuhan", "Dari Bandara Internasional I Gusti Ngurah Rai (DPS), lanjutkan dengan kendaraan darat menuju pelabuhan penyeberangan di Bali. Sanur kerap menjadi titik berangkat yang umum; Kusamba atau Padang Bai dapat relevan tergantung rencana kapal dan kendaraan. Periksa waktu tempuh sesuai lalu lintas, bagasi, dan jadwal kedatangan Anda."],
       ["02 · Pelabuhan → Nusa Penida", "Seberangi laut dengan layanan kapal yang beroperasi menuju pelabuhan Nusa Penida. Jangan mengandalkan satu jadwal atau harga tetap: cuaca, kapasitas, pelabuhan tujuan, ketentuan bagasi, dan pembatalan dapat berubah. Simpan bukti pemesanan serta beri waktu cadangan sebelum koneksi berikutnya."],
@@ -43,14 +43,15 @@ const copy = {
     amenitiesTitle: "Kebutuhan praktis, tanpa rekomendasi komersial.",
     amenitiesText: "Fasilitas di kawasan wisata pulau dapat berubah. Anggap informasi berikut sebagai daftar kesiapan, bukan jaminan ketersediaan.",
     amenities: [["Parkir & jalur jalan kaki", "Parkir bersama dapat berada dekat akses Angel’s Billabong dan Broken Beach. Gunakan tempat yang ditentukan, simpan barang berharga, lalu lanjutkan dengan berjalan di jalur yang terbuka—bukan melalui batu atau batas pandang."], ["WC & area ganti", "Fasilitas dasar mungkin tersedia di kawasan akses, tetapi kebersihan, antrean, dan biaya kecil dapat berubah. Gunakan sebelum memasuki jalur tebing; jangan menganggap fasilitas khusus akan tersedia."], ["Makan & air minum", "Area wisata dan pusat permukiman dapat memiliki warung atau tempat makan sederhana. Bawa air minum isi ulang serta makanan ringan yang cukup; pilih layanan sesuai kebutuhan Anda tanpa mengandalkan rekomendasi operator tertentu."], ["Menginap & belanja kebutuhan", "Pilihan penginapan, toko kebutuhan harian, dan ATM lebih masuk akal dicari di area pelabuhan atau pusat desa sebelum menuju pesisir barat. Jika jadwal pulang kapal ketat, pertimbangkan bermalam daripada menambah perjalanan malam."], ["Bahan bakar & daya perangkat", "Isi bahan bakar, periksa ban, dan isi daya ponsel/power bank sebelum meninggalkan kawasan yang lebih ramai. Tidak semua tempat memiliki fasilitas pengisian daya, dan sinyal dapat berubah menurut lokasi."], ["Uang tunai & komunikasi", "Simpan uang tunai secukupnya untuk biaya kecil dan siapkan peta offline. Jaringan seluler dapat bervariasi; beri tahu rekan perjalanan tentang rute dan waktu kembali, terutama jika Anda bepergian mandiri."]],
-    scienceKicker: "MEMBACA LANSKAP", scienceTitle: "Bukan kolam buatan—ini garis pantai yang terus bekerja.", scienceText: "Nusa Penida banyak memperlihatkan batu kapur pesisir. Di Angel’s Billabong, air laut dan gelombang berinteraksi dengan celah serta permukaan batu untuk membentuk cekungan alami di tepi tebing. Air yang tampak diam bukan perairan terpisah: cekungan ini tetap berada dalam sistem pantai terbuka.",
+    scienceKicker: "MEMBACA LANSKAP", scienceTitle: "Geologi & Makna Angel’s Billabong", scienceText: "Nusa Penida banyak memperlihatkan batu kapur pesisir. Di Angel’s Billabong, air laut dan gelombang berinteraksi dengan celah serta permukaan batu untuk membentuk cekungan alami di tepi tebing. Air yang tampak diam bukan perairan terpisah: cekungan ini tetap berada dalam sistem pantai terbuka.",
     scienceNotes: [["Proses", "Erosi laut membentuk cekungan batu di garis pantai."], ["Konteks", "Angel’s Billabong bersebelahan dengan Broken Beach; Pasih Uug adalah nama lokal untuk Broken Beach."], ["Yang belum dipastikan", "Situs ini tidak menemukan sumber otoritatif untuk legenda asal-usul nama “Angel’s Billabong”; karena itu, kami tidak menyajikan cerita lisan sebagai fakta."]],
-    nearbyKicker: "DI SEKITAR SINI", nearbyTitle: "Tiga lanskap, satu sisi liar Nusa Penida.",
+    nearbyKicker: "DI SEKITAR SINI", nearbyTitle: "Tengara & Objek Wisata di Sekitar Angel’s Billabong",
     nearby: [["Broken Beach / Pasih Uug", "Tebing melingkar dan lengkungan batu alam, hanya beberapa menit dari Angel’s Billabong."], ["Kelingking Beach", "Sudut pandang pesisir ikonis di barat pulau; rencanakan waktu perjalanan dan kondisi jalan."], ["Crystal Bay", "Teluk di sisi barat yang kerap dimasukkan ke rute satu hari, dengan karakter laut yang juga perlu diperiksa." ]],
-    mapKicker: "ORIENTASI", mapTitle: "Temukan titik masuk, lalu ikuti penanda di lapangan.",
+    nearbyLead: "Saat mengunjungi Angel’s Billabong, wisatawan kerap memadukannya dengan Broken Beach (Pasih Uug) dan Pantai Kelingking — tiga tengara pesisir barat Nusa Penida yang sering direncanakan bersama.",
+    mapKicker: "ORIENTASI", mapTitle: "Lokasi & Peta Angel’s Billabong",
     faqKicker: "PERTANYAAN UMUM", faqTitle: "Jawaban singkat untuk keputusan yang lebih aman.",
     faqs: [["Apakah boleh berenang?", "Tidak dianjurkan untuk masuk ke kolam. Ikuti penutupan dan instruksi petugas; ombak dapat masuk tiba-tiba bahkan saat air terlihat tenang."], ["Berapa lama waktu yang dibutuhkan?", "Kebanyakan pengunjung menggabungkan Angel’s Billabong dan Broken Beach dalam satu pemberhentian sekitar 1–2 jam."], ["Apakah tempat ini cocok untuk anak-anak?", "Area tebing dan batu bisa licin. Anak-anak memerlukan pendampingan dekat setiap saat dan tidak boleh mendekati tepi."], ["Apa yang perlu dibawa?", "Air minum, perlindungan matahari, alas kaki dengan pijakan baik, uang tunai terbatas, dan ponsel yang terisi daya. Hindari sandal yang licin."], ["Apakah informasi biaya dan akses selalu sama?", "Tidak. Retribusi, akses, dan aturan keselamatan dapat berubah. Verifikasi di lokasi sebelum membuat rencana final."]],
-    referencesLabel: "Rujukan", references: "Panduan akses penyeberangan dan tata kelola pulau merujuk pada materi publik Dinas Perhubungan Provinsi Bali, Dinas Pariwisata Kabupaten Klungkung, serta rencana tata ruang wilayah Kabupaten Klungkung. Konfirmasi ketentuan akses dan keselamatan selalu dilakukan di lokasi sebelum memasuki kawasan wisata.", footer: "Proyek panduan pengunjung independen dan nirlaba. Tidak berafiliasi dengan pemerintah, pengelola, atau organisasi resmi mana pun.",
+    sourcesLabel: "SUMBER", sourcesTitle: "Sumber & Rujukan", sources: [["Pemerintah Provinsi Bali", "https://www.baliprov.go.id/"], ["Indonesia Travel — Kemenparekraf", "https://www.indonesia.travel/"], ["Google Maps — Angel’s Billabong", "https://maps.app.goo.gl/q5r1R672tXpLuvRP8"]], referencesLabel: "Rujukan", references: "Panduan akses penyeberangan dan tata kelola pulau merujuk pada materi publik Dinas Perhubungan Provinsi Bali, Dinas Pariwisata Kabupaten Klungkung, serta rencana tata ruang wilayah Kabupaten Klungkung. Konfirmasi ketentuan akses dan keselamatan selalu dilakukan di lokasi sebelum memasuki kawasan wisata.", footer: "Proyek panduan pengunjung independen dan nirlaba. Tidak berafiliasi dengan pemerintah, pengelola, atau organisasi resmi mana pun.",
     footerResearch: "Konteks lokasi dirangkum dari materi publik tentang Kabupaten Klungkung, Bali, dan pariwisata Indonesia; tidak memuat rekomendasi komersial.",
     privacy: "Privasi", terms: "Ketentuan", cookies: "Cookie", photoNotice: "Hak foto tetap berada pada fotografer atau pemegang hak terkait.",
   },
@@ -62,24 +63,25 @@ const copy = {
     protocolTitle: "Field protocol: stop, observe, decide.", protocolText: "Before leaving the parking area, read the sea from the upper path. Do not treat a calm-looking pool, a photo stop, or a boat schedule as a reason to cross a barrier. Leave enough time to return to your vehicle and harbour before light fades.",
     explore: "Plan your visit", location: "Sakti, Nusa Penida · Klungkung, Bali",
     heroLead: "A natural rock pool at the ocean’s edge, shaped by erosion and best understood from a safe distance.",
-    fieldNote: "FIELD NOTE 01", aboutTitle: "A tidal basin framed by limestone.",
-    aboutText: "Angel’s Billabong sits on Nusa Penida’s west coast, close to Broken Beach. This rock basin connects to the open sea; in calm conditions, its surface can resemble an infinity pool. Its natural character calls for caution—waves can sweep across the rock without much warning.",
+    fieldNote: "FIELD NOTE 01", aboutTitle: "About Angel’s Billabong",
+    aboutText: "Angel’s Billabong, Nusa Penida, sits on the island’s west coast, close to Broken Beach. This rock basin connects to the open sea; in calm conditions, its surface can resemble an infinity pool. Its natural character calls for caution—waves can sweep across the rock without much warning.",
     facts: [["Area", "Sakti, Nusa Penida District"], ["Landscape", "Coastal rock pool & cliff"], ["Pair it with", "Broken Beach / Pasih Uug"], ["Core principle", "Observe from a safe zone"]],
-    visitKicker: "BEFORE YOU GO", visitTitle: "Let the sea set the plan—not the other way around.",
+    visitKicker: "BEFORE YOU GO", visitTitle: "Planning Your Visit to Angel’s Billabong",
     visitCards: [["Best window", "Go in the morning or late afternoon for softer light and often more comfortable visitor flow. Water conditions are still the first consideration."], ["Time needed", "Allow around 1–2 hours for Angel’s Billabong and Broken Beach, including the walk from parking and time at the viewpoints."], ["Entry & costs", "A small retribution and parking fee may apply and may change. Bring limited cash and confirm the amount and access on site."], ["Parking", "Public parking is near the access point. Use the marked pedestrian route, secure your vehicle, and keep entrances clear."]],
-    accessKicker: "ON-ISLAND ACCESS", accessTitle: "A boat takes you to Nusa Penida. Island roads take you to the rock edge.",
+    accessKicker: "ON-ISLAND ACCESS", accessTitle: "How to Get to Angel’s Billabong, Nusa Penida",
     routes: [["01 · Airport → harbour", "From I Gusti Ngurah Rai International Airport (DPS), continue by road to a Bali crossing harbour. Sanur is often a common departure point; Kusamba or Padang Bai may fit a different boat or vehicle plan. Check the travel time against traffic, luggage, and your arrival schedule."], ["02 · Harbour → Nusa Penida", "Cross with a boat service operating to a Nusa Penida harbour. Do not rely on one fixed timetable or fare: weather, capacity, destination harbour, baggage rules, and cancellations can change. Keep booking evidence and allow slack before your next connection."], ["03 · Bus, taxi & realistic options", "There is no regular public-bus route to Angel’s Billabong, and metered-taxi or ride-hailing availability should not be assumed on the island. If you are not self-driving, arrange a harbour pickup or a driver-led vehicle before crossing; match it to group size and accessibility needs."], ["04 · Final approach to the site", "From the harbour area, west-island roads towards Sakti and the parking point require time and attention on narrow, hilly routes whose conditions can vary. Experienced riders may use a scooter with helmet and appropriate footwear; for many visitors, an enclosed vehicle with a driver is easier to manage."]],
     amenitiesTitle: "Practical needs, without commercial recommendations.",
     amenitiesText: "Facilities around island attractions can change. Treat this as a preparedness checklist, not a guarantee of availability.",
     amenities: [["Parking & walking path", "Shared parking may sit near access to Angel’s Billabong and Broken Beach. Use the designated space, secure valuables, then continue only on the open path—not across rock or viewpoint boundaries."], ["Toilets & changing", "Basic facilities may be available near the access area, but cleanliness, queues, and small fees can change. Use them before taking the cliff path and do not assume specialist facilities are available."], ["Food & drinking water", "The visitor area and larger settlements may have simple food stalls or eateries. Carry enough refillable drinking water and a snack; choose services for your own needs without relying on endorsements from this guide."], ["Stays & everyday supplies", "Accommodation, daily-needs shops, and ATMs are more practical to arrange around harbour areas or village centres before heading west. If your boat return is tight, consider an overnight stay rather than adding a night journey."], ["Fuel & device power", "Refuel, check tyres, and charge your phone or power bank before leaving busier areas. Not every stop has charging access, and signal can vary by location."], ["Cash & communications", "Carry limited cash for small costs and prepare an offline map. Mobile coverage can vary; tell a travel companion your route and return time, especially when travelling independently."]],
-    scienceKicker: "READING THE LANDSCAPE", scienceTitle: "Not a built pool—an active coastline.", scienceText: "Nusa Penida reveals extensive coastal limestone. At Angel’s Billabong, seawater and wave action interact with rock joints and surfaces to form a natural basin at the cliff edge. Water that looks still is not separate from the sea: the basin remains part of an open-coast system.",
+    scienceKicker: "READING THE LANDSCAPE", scienceTitle: "Geology & Significance of Angel’s Billabong", scienceText: "Nusa Penida reveals extensive coastal limestone. At Angel’s Billabong, seawater and wave action interact with rock joints and surfaces to form a natural basin at the cliff edge. Water that looks still is not separate from the sea: the basin remains part of an open-coast system.",
     scienceNotes: [["Process", "Marine erosion forms a rock basin along the coast."], ["Context", "Angel’s Billabong sits beside Broken Beach; Pasih Uug is the local name used for Broken Beach."], ["What is not verified", "This guide did not find an authoritative source for a legend explaining the “Angel’s Billabong” name, so it does not present oral stories as fact."]],
-    nearbyKicker: "NEARBY", nearbyTitle: "Three landscapes, one wilder side of Nusa Penida.",
+    nearbyKicker: "NEARBY", nearbyTitle: "Landmarks & Attractions Around Angel’s Billabong",
     nearby: [["Broken Beach / Pasih Uug", "A circular cliff and natural rock arch, a few minutes from Angel’s Billabong."], ["Kelingking Beach", "An iconic west-island coastal viewpoint; leave adequate time for driving and road conditions."], ["Crystal Bay", "A west-side cove often added to a day route, with sea conditions that also need checking."]],
-    mapKicker: "ORIENTATION", mapTitle: "Find the access point, then follow the signs on the ground.",
+    nearbyLead: "When visiting Angel’s Billabong, visitors pair it with Broken Beach (Pasih Uug) and Kelingking Beach — the three west-coast Nusa Penida landmarks most often planned together.",
+    mapKicker: "ORIENTATION", mapTitle: "Location & Map of Angel’s Billabong",
     faqKicker: "COMMON QUESTIONS", faqTitle: "Short answers for safer decisions.",
     faqs: [["Can I swim?", "Entering the pool is not recommended. Follow closures and staff instructions; waves can arrive suddenly even when the water looks calm."], ["How long should I allow?", "Most visitors combine Angel’s Billabong and Broken Beach in one stop of around 1–2 hours."], ["Is it suitable for children?", "The cliff and rock areas can be slippery. Children need close supervision at all times and should never approach the edge."], ["What should I bring?", "Drinking water, sun protection, shoes with good grip, limited cash, and a charged phone. Avoid slippery sandals."], ["Are access and fees always the same?", "No. Retribution, access, and safety rules can change. Verify locally before finalising your plans."]],
-    referencesLabel: "References", references: "Crossing and on-island access guidance is drawn from public material issued by the Bali Provincial Transport Agency, the Klungkung Regency Tourism Office, and the Klungkung Regency spatial plan. Access and safety rules should always be confirmed on site before entering any visitor area.", footer: "An independent, non-profit visitor information project. It is not affiliated with any government authority, operator, or official organisation.",
+    sourcesLabel: "SOURCES", sourcesTitle: "Sources & References", sources: [["Bali Provincial Government", "https://www.baliprov.go.id/"], ["Indonesia Travel — Ministry of Tourism", "https://www.indonesia.travel/"], ["Google Maps — Angel’s Billabong", "https://maps.app.goo.gl/q5r1R672tXpLuvRP8"]], referencesLabel: "References", references: "Crossing and on-island access guidance is drawn from public material issued by the Bali Provincial Transport Agency, the Klungkung Regency Tourism Office, and the Klungkung Regency spatial plan. Access and safety rules should always be confirmed on site before entering any visitor area.", footer: "An independent, non-profit visitor information project. It is not affiliated with any government authority, operator, or official organisation.",
     footerResearch: "Location context is summarised from publicly available material concerning Klungkung Regency, Bali, and Indonesian tourism; it contains no commercial recommendations.",
     privacy: "Privacy", terms: "Terms", cookies: "Cookies", photoNotice: "Photo copyrights remain with their respective photographers or rights holders.",
   },
@@ -116,23 +118,8 @@ export default function Home() {
     return () => window.removeEventListener("cookiePreferenceUpdated", syncAnalytics);
   }, []);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    name: "Angel’s Billabong",
-    description: t.heroLead,
-    address: { "@type": "PostalAddress", addressLocality: "Sakti", addressRegion: "Bali", postalCode: "80771", addressCountry: "ID" },
-    geo: { "@type": "GeoCoordinates", latitude: -8.733500291280242, longitude: 115.44639851246426 },
-    openingHours: "Mo-Su daylight hours recommended; access follows local conditions",
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.5", bestRating: "5", reviewCount: "700" },
-    isAccessibleForFree: false,
-  };
-  const faqLd = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: t.faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
-
   return (
     <div className="site-shell">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <header className="topbar">
         <a className="brand" href="#top" aria-label="Angel’s Billabong home"><img src={brandMark} alt="" /><span>Angel’s<br />Billabong</span></a>
         <nav aria-label="Primary navigation">{t.nav.map((item, index) => <a href={["#about", "#visit", "#access", "#map", "#faq"][index]} key={item}>{item}</a>)}</nav>
@@ -141,9 +128,9 @@ export default function Home() {
 
       <main id="top">
         <section className="hero">
-          <img className="hero-photo" src={photoHero} alt={language === "id" ? "Kolam batu Angel’s Billabong di pesisir Nusa Penida" : "Angel’s Billabong rock pool on the Nusa Penida coast"} />
+          <img className="hero-photo" src={photoHero} alt={language === "id" ? "Angel’s Billabong — kolam batu alami di tepi samudra di Nusa Penida, Bali, Indonesia" : "Angel’s Billabong — natural rock pool at the ocean’s edge in Nusa Penida, Bali, Indonesia"} />
           <div className="hero-wash" />
-          <div className="hero-grid"><p className="hero-location"><MapPin size={15} /> {t.location}</p><div className="hero-content"><p className="eyebrow light">NUSA PENIDA · BALI</p><h1><span className="hero-title-line">Angel’s</span><span className="hero-title-line hero-title-line--accent"><em>Billabong</em></span></h1><p>{t.heroLead}</p><a className="coral-button" href="#visit">{t.explore} <ArrowDownRight size={17} /></a></div><p className="hero-index">07° 8′ S · 115° 27′ E</p></div>
+          <div className="hero-grid"><p className="hero-location"><MapPin size={15} /> {t.location}</p><div className="hero-content"><p className="eyebrow light">NUSA PENIDA · BALI</p><h1><span className="hero-title-line">Angel’s</span> <span className="hero-title-line hero-title-line--accent"><em>Billabong</em></span> <span className="hero-title-city">(Nusa Penida)</span></h1><p>{t.heroLead}</p><a className="coral-button" href="#visit">{t.explore} <ArrowDownRight size={17} /></a></div><p className="hero-index">07° 8′ S · 115° 27′ E</p></div>
         </section>
 
         <section className="safety-band" aria-label={t.safetyLabel}>
@@ -154,7 +141,7 @@ export default function Home() {
 
         <section className="section about-section" id="about" data-field="OBSERVED · 01">
           <div className="section-rail"><span>01</span><div /><span>{t.fieldNote}</span></div>
-          <div className="about-copy"><p className="eyebrow">{t.fieldNote}</p><h2>{t.aboutTitle}</h2><p>{t.aboutText}</p></div>
+          <div className="about-copy"><nav className="breadcrumb" aria-label="Breadcrumb"><span>Angel’s Billabong</span><span className="sep">→</span><span>Sakti</span><span className="sep">→</span><span>Nusa Penida</span><span className="sep">→</span><span>Bali</span><span className="sep">→</span><span>Indonesia</span></nav><p className="eyebrow">{t.fieldNote}</p><h2>{t.aboutTitle}</h2><p>{t.aboutText}</p></div>
           <div className="fact-list">{t.facts.map(([label, value]) => <div className="fact" key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>
           <figure className="side-art"><img src={limestoneSection} alt="" /><figcaption>{language === "id" ? "Bentuk batu pesisir berubah bersama pasang surut." : "Coastal rock forms change with the tide."}</figcaption></figure>
         </section>
@@ -181,8 +168,8 @@ export default function Home() {
         </section>
 
         <section className="section nearby-section" data-field="COASTLINE · 05">
-          <div className="nearby-copy"><p className="eyebrow light">{t.nearbyKicker}</p><h2>{t.nearbyTitle}</h2><p>{language === "id" ? "Pertimbangkan cuaca, sisa cahaya, dan kebutuhan kembali ke pelabuhan sebelum menambah pemberhentian." : "Consider weather, remaining daylight, and your return to the harbour before adding another stop."}</p></div>
-          <figure className="nearby-photo"><img src={photoCliff} alt={language === "id" ? "Tebing pantai Nusa Penida" : "Nusa Penida coastal cliffs"} /><figcaption>{language === "id" ? "KONTEKS LANSKAP · Pesisir Nusa Penida; bukan jalur yang ditentukan." : "LANDSCAPE CONTEXT · Nusa Penida coast; not a prescribed route."}</figcaption></figure>
+          <div className="nearby-copy"><p className="eyebrow light">{t.nearbyKicker}</p><h2>{t.nearbyTitle}</h2><p>{t.nearbyLead}</p><p>{language === "id" ? "Pertimbangkan cuaca, sisa cahaya, dan kebutuhan kembali ke pelabuhan sebelum menambah pemberhentian." : "Consider weather, remaining daylight, and your return to the harbour before adding another stop."}</p></div>
+          <figure className="nearby-photo"><img src={photoCliff} alt={language === "id" ? "Tebing pesisir dekat Angel’s Billabong dan Broken Beach, Nusa Penida" : "Coastal cliffs near Angel’s Billabong and Broken Beach, Nusa Penida"} /><figcaption>{language === "id" ? "KONTEKS LANSKAP · Pesisir Nusa Penida; bukan jalur yang ditentukan." : "LANDSCAPE CONTEXT · Nusa Penida coast; not a prescribed route."}</figcaption></figure>
           <div className="nearby-list">{t.nearby.map(([title, text], i) => <article key={title}><span>0{i + 1}</span><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
         </section>
 
@@ -193,7 +180,15 @@ export default function Home() {
 
         <section className="section faq-section" id="faq" data-field="FIELD FAQ · 07"><div className="faq-header"><p className="eyebrow">{t.faqKicker}</p><h2>{t.faqTitle}</h2></div><div className="faq-list">{t.faqs.map(([question, answer]) => <details key={question}><summary>{question}<ChevronDown size={20} /></summary><p>{answer}</p></details>)}</div></section>
 
-        <section className="references-section"><p>{t.referencesLabel}</p><p>{t.references}</p></section>
+        <section className="references-section" aria-labelledby="sources-title">
+          <div className="references-inner">
+            <p className="eyebrow">{t.sourcesLabel}</p>
+            <h2 id="sources-title">{t.sourcesTitle}</h2>
+            <p>{t.references}</p>
+            <ul className="source-list">{t.sources.map(([label, url]) => <li key={label}><a href={url} target="_blank" rel="noopener noreferrer">{label} <ArrowUpRight size={13} /></a></li>)}</ul>
+            <p className="footer-research">{t.footerResearch}</p>
+          </div>
+        </section>
       </main>
 
       <footer className="footer"><div className="footer-brand"><img src={brandMark} alt="" /><span>Angel’s Billabong<br /><em>Field Guide</em></span></div><div><p>{t.footer}</p><p>{t.footerResearch}</p><p className="photo-note">{t.photoNotice}</p></div><div className="footer-links"><a href="/privacy">{t.privacy}</a><a href="/terms">{t.terms}</a><a href="/cookie">{t.cookies}</a></div><p className="copyright">© 2026 Angel’s Billabong · Klungkung, Bali</p></footer>

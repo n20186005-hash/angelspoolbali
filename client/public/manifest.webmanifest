@@ -1,0 +1,16 @@
+{
+  "name": "Angel's Billabong Nusa Penida — Travel Guide",
+  "short_name": "Angel's Billabong",
+  "description": "Independent visitor guide to Angel's Billabong, a natural rock pool on the west coast of Nusa Penida, Bali, Indonesia.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0E3A3B",
+  "theme_color": "#0E3A3B",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
