@@ -1,0 +1,6 @@
+---
+import data from '../data/guide.json';import Layout from './Layout.astro';
+interface Props { locale:'id'|'en'; page:'privacy'|'terms'|'cookie'; }
+const {locale,page}=Astro.props;const d=data.copy[locale], [h,p]=d.legal[page],home=locale==='en'?'/en/':'/';
+---
+<Layout locale={locale} page={page} title={h+' | Angel’s Billabong Guide'} description={p.split('. ')[0]+'.'}><main id="main"><section><a href={home}>← {d.back}</a><p class="eyebrow">{d.updated}</p><h1>{h}</h1><p>{p}</p>{page==='privacy'&&<p><a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a></p>}{page==='cookie'&&<form id="cookie-settings"><label class="check"><input id="analytics" type="checkbox"/>{d.analytics}</label><button type="submit">{d.save}</button> <button type="button" data-cookie-reject>{d.reject}</button><p data-consent-status role="status" aria-live="polite"></p></form>}</section></main></Layout>
