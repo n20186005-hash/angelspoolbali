@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://angelspoolbali.com/sitemap-index.xml
