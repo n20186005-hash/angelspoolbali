@@ -13,7 +13,8 @@
     "build": "astro build",
     "check": "astro check",
     "preview": "astro preview",
-    "deploy": "pnpm build && wrangler deploy"
+    "deploy": "pnpm build && wrangler deploy",
+    "test": "node scripts/consent-test.mjs && node scripts/worker-test.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.7.3",

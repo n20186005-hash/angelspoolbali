@@ -85,7 +85,7 @@
       "legal": {
         "privacy": [
           "Kebijakan Privasi",
-          "Panduan ini tidak memiliki akun, pemesanan, formulir kontak, atau alamat email untuk mengirim data pribadi. Penyedia hosting dapat memproses log teknis seperti alamat IP, waktu, peramban, dan halaman yang diminta untuk pengiriman serta keamanan situs. Google Analytics dimuat hanya setelah izin eksplisit; data penggunaan dan pengenal kuki dapat dikirim ke Google. Tidak ada peta tersemat, font eksternal, atau permintaan cuaca otomatis. Tautan eksternal tunduk pada kebijakan penyedianya. Preferensi analitik menggunakan localStorage dan penolakan tab menggunakan sessionStorage. Bila penyimpanan gagal, pesan status membedakan penolakan untuk tab dari penolakan yang hanya berlaku pada halaman ini; kami tidak mengklaim pilihan permanen tersimpan bila gagal. Hapus data situs melalui pengaturan peramban untuk menghapus izin lama. Pilihan dari versi situs sebelumnya tidak diaktifkan otomatis."
+          "Panduan ini tidak memiliki akun, pemesanan, formulir kontak, atau alamat email untuk mengirim data pribadi. Penyedia hosting dapat memproses log teknis seperti alamat IP, waktu, peramban, dan halaman yang diminta untuk pengiriman serta keamanan situs. Penyedia hosting dapat menambahkan Cloudflare Web Analytics secara terpisah untuk mengukur tampilan halaman dan kinerja pemuatan melalui beacon peramban. Pengaturan Google Analytics tidak mengendalikan pengukuran hosting ini. Keberadaan skrip saja tidak membuktikan pengiriman data pengukuran berhasil. Google Analytics dimuat hanya setelah izin eksplisit; data penggunaan dan pengenal kuki dapat dikirim ke Google. Tidak ada peta tersemat, font eksternal, atau permintaan cuaca otomatis. Tautan eksternal tunduk pada kebijakan penyedianya. Pilihan Google Analytics menggunakan localStorage dan penolakan tab menggunakan sessionStorage. Bila penyimpanan gagal, pesan status membedakan penolakan untuk tab dari penolakan yang hanya berlaku pada halaman ini; kami tidak mengklaim pilihan permanen tersimpan bila gagal. Hapus data situs melalui pengaturan peramban untuk menghapus izin lama. Pilihan dari versi situs sebelumnya tidak diaktifkan otomatis."
         ],
         "terms": [
           "Ketentuan Penggunaan",
@@ -93,15 +93,15 @@
         ],
         "cookie": [
           "Pengaturan Kuki",
-          "Analitik opsional tidak dimuat sebelum Anda mengizinkannya. Pilihan menggunakan penyimpanan lokal; penolakan tab memakai sessionStorage. Tidak ada kuki pemasaran atau fungsi preferensi lain. Anda dapat menarik izin di sini. Bila pilihan permanen gagal disimpan, izin lama mungkin masih ada; baca pesan status dan hapus data situs melalui pengaturan peramban bila diperlukan. Pilihan berlaku pada peramban, tab, atau halaman sesuai status yang ditampilkan."
+          "Google Analytics tidak dimuat sebelum Anda mengizinkannya. Pilihan ini hanya mengendalikan Google Analytics; pengukuran tampilan halaman dan kinerja pemuatan hosting Cloudflare tidak dinonaktifkan oleh pilihan ini. Pilihan menggunakan penyimpanan lokal; penolakan tab memakai sessionStorage. Tidak ada kuki pemasaran atau fungsi preferensi lain. Anda dapat menarik izin di sini. Bila pilihan permanen gagal disimpan, izin lama mungkin masih ada; baca pesan status dan hapus data situs melalui pengaturan peramban bila diperlukan. Pilihan berlaku pada peramban, tab, atau halaman sesuai status yang ditampilkan."
         ]
       },
       "save": "Simpan pilihan",
-      "reject": "Tolak analitik",
-      "allow": "Izinkan analitik",
+      "reject": "Tolak Google Analytics",
+      "allow": "Izinkan Google Analytics",
       "analytics": "Izinkan Google Analytics",
       "manage": "Pengaturan kuki",
-      "banner": "Analitik opsional dinonaktifkan sebelum izin Anda.",
+      "banner": "Google Analytics nonaktif sebelum izin Anda. Pilihan ini tidak mengendalikan pengukuran kinerja hosting.",
       "back": "Kembali ke panduan"
     },
     "en": {
@@ -189,7 +189,7 @@
       "legal": {
         "privacy": [
           "Privacy Policy",
-          "This guide has no accounts, bookings, contact forms or email address for submitting personal data. The hosting provider may process technical logs such as IP address, time, browser and requested page for delivery and security. Google Analytics loads only after explicit permission; usage data and cookie identifiers may then be sent to Google. There are no embedded maps, external fonts or automatic weather requests. External links are subject to their providers’ policies. Analytics choices use localStorage and tab refusal uses sessionStorage. If storage fails, the status distinguishes tab refusal from refusal that applies only to this page; we do not claim that a permanent choice was saved when it failed. Clear site data in browser settings to remove old permission. Choices from earlier site versions are not automatically enabled."
+          "This guide has no accounts, bookings, contact forms or email address for submitting personal data. The hosting provider may process technical logs such as IP address, time, browser and requested page for delivery and security. The hosting provider may separately add Cloudflare Web Analytics to measure page views and loading performance through a browser beacon. The Google Analytics setting does not control this hosting measurement. Script presence alone does not establish successful measurement delivery. Google Analytics loads only after explicit permission; usage data and cookie identifiers may then be sent to Google. There are no embedded maps, external fonts or automatic weather requests. External links are subject to their providers’ policies. Google Analytics choices use localStorage and tab refusal uses sessionStorage. If storage fails, the status distinguishes tab refusal from refusal that applies only to this page; we do not claim that a permanent choice was saved when it failed. Clear site data in browser settings to remove old permission. Choices from earlier site versions are not automatically enabled."
         ],
         "terms": [
           "Terms of Use",
@@ -197,15 +197,15 @@
         ],
         "cookie": [
           "Cookie Settings",
-          "Optional analytics does not load before you allow it. Choices use local storage; tab refusal uses sessionStorage. There are no marketing cookies or other preference functions. You can withdraw permission here. If a permanent choice cannot be saved, an old grant may remain; read the status and clear site data in browser settings if needed. The choice applies to this browser, tab or page as stated in the status."
+          "Google Analytics does not load before you allow it. This choice controls Google Analytics only; it does not disable Cloudflare hosting page-view/loading-performance measurement. Choices use local storage; tab refusal uses sessionStorage. There are no marketing cookies or other preference functions. You can withdraw permission here. If a permanent choice cannot be saved, an old grant may remain; read the status and clear site data in browser settings if needed. The choice applies to this browser, tab or page as stated in the status."
         ]
       },
       "save": "Save choice",
-      "reject": "Reject analytics",
-      "allow": "Allow analytics",
+      "reject": "Reject Google Analytics",
+      "allow": "Allow Google Analytics",
       "analytics": "Allow Google Analytics",
       "manage": "Cookie settings",
-      "banner": "Optional analytics is off before your permission.",
+      "banner": "Google Analytics is off before your permission. This choice does not control hosting performance measurement.",
       "back": "Back to guide"
     }
   },

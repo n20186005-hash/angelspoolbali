@@ -1,0 +1,30 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const code=fs.readFileSync('public/js/consent.js','utf8');assert.equal(code,fs.readFileSync('dist/js/consent.js','utf8'));
+const KEY='billabong_cookie_preferences',DENY='billabong_analytics_denied',GA='ga-disable-G-HXM22WWPKP';
+function store(map=new Map()){return{map,fail:{},writes:[],getItem(k){if(this.fail.read)throw Error('read');return map.get(k)??null},setItem(k,v){if(this.fail.write)throw Error('write');this.writes.push([k,v]);map.set(k,v);if(this.fail.lateRead)this.fail.read=true},removeItem(k){if(this.fail.remove)throw Error('remove');if(!this.fail.ignoreRemove)map.delete(k)}}}
+function page({lang='en',local=store(),session=store()}={}){
+ const html=fs.readFileSync(lang==='en'?'dist/en/cookie/index.html':'dist/cookie/index.html','utf8');assert(html.includes(`<html lang="${lang}">`));assert(html.includes('src="/js/consent.js" defer'));for(const id of ['analytics','cookie-settings','cookie-banner'])assert(html.indexOf(`id="${id}"`)<html.indexOf('src="/js/consent.js"'));
+ const scripts=[],events={},checkbox={checked:false},statuses=[{textContent:''},{textContent:''}],accept={addEventListener(type,fn){this[type]=fn}},rejects=[0,1].map(()=>({addEventListener(type,fn){this[type]=fn}})),form={addEventListener(type,fn){this[type]=fn}},classes=new Set(['hidden']),banner={classList:{add:x=>classes.add(x),remove:x=>classes.delete(x)}};
+ const c={localStorage:local,sessionStorage:session,location:{hostname:'angelspoolbali.com'},document:{documentElement:{lang},cookie:'',createElement:()=>({}),head:{appendChild:s=>scripts.push(s)},getElementById:id=>({'analytics':checkbox,'cookie-settings':form,'cookie-banner':banner}[id]),querySelectorAll:q=>q==='[data-consent-status]'?statuses:q==='[data-cookie-accept]'?[accept]:q==='[data-cookie-reject]'?rejects:[]},addEventListener:(type,fn)=>(events[type]||=[]).push(fn)};
+ c.window=c;vm.createContext(c);const initialize=()=>vm.runInContext(code,c);initialize();
+ return{c,scripts,local,session,checkbox,statuses,classes,initialize,allow(){checkbox.checked=true;form.submit({preventDefault(){}})},bannerAllow(){accept.click()},deny(){rejects[0].click()},bannerDeny(){rejects[1].click()},event:value=>(events.storage||[]).forEach(fn=>fn({key:KEY,newValue:value})),reload:()=>page({lang,local,session}),allowed:()=>c[GA]===false,runtime:()=>c.dataLayer?.filter(a=>a[0]==='consent').at(-1)?.[2].analytics_storage};
+}
+for(const lang of ['id','en']){
+ let p=page({lang});assert.equal(p.scripts.length,0);assert.equal(p.allowed(),false);assert.equal(p.classes.has('hidden'),false);p.bannerAllow();assert.equal(p.allowed(),true);p.deny();assert.equal(p.runtime(),'denied');p.allow();assert.equal(p.runtime(),'granted');assert.equal(p.scripts.length,1);assert.equal(p.checkbox.checked,true);assert.match(p.statuses[0].textContent,/allowed|diizinkan/);
+ p.bannerDeny();assert.equal(p.checkbox.checked,false);assert.equal(p.statuses[0].textContent,p.statuses[1].textContent);
+ for(const dualFailure of [false,true]){
+  p=page({lang,local:store(new Map([[KEY,'{"analytics":true}']]))});assert.equal(p.scripts.length,1);p.local.fail.write=true;p.session.fail.write=dualFailure;p.deny();assert.equal(p.allowed(),false);assert.equal(p.runtime(),'denied');assert.match(p.statuses[0].textContent,dualFailure?/this page|halaman ini/:/this tab|tab ini/);p.initialize();assert.equal(p.allowed(),false);assert.equal(p.scripts.length,1);if(!dualFailure)assert.equal(p.reload().scripts.length,0);
+ }
+ for(const failure of ['read','write']){
+  const local=store(new Map([[KEY,'{"analytics":false}']]));local.fail[failure]=true;p=page({lang,local});p.allow();assert.equal(p.allowed(),false);assert.equal(p.scripts.length,0);assert.equal(p.checkbox.checked,false);assert.equal(JSON.parse(local.map.get(KEY)).analytics,false);assert.doesNotMatch(p.statuses[0].textContent,/allowed|diizinkan/);
+ }
+ const local=store(new Map([[KEY,'{"analytics":false}']])),unreadable=store(local.map);unreadable.fail.read=true;p=page({lang,local:unreadable});const healthy=page({lang,local});p.allow();healthy.event(local.getItem(KEY));assert.equal(healthy.scripts.length,0);assert.equal(JSON.parse(local.getItem(KEY)).analytics,false);
+ const session=store();session.fail.read=true;p=page({lang,local:store(new Map([[KEY,'{"analytics":true}']])),session});assert.equal(p.scripts.length,0);p.allow();assert.equal(p.allowed(),false);assert.equal(p.checkbox.checked,false);
+ for(const failure of ['remove','ignoreRemove']){
+  const shared=store(new Map([[KEY,'{"analytics":false}']]));p=page({lang,local:shared,session:store(new Map([[DENY,'1']]))});p.session.fail[failure]=true;p.allow();assert.equal(JSON.parse(shared.getItem(KEY)).analytics,false);assert.equal(p.allowed(),false);
+ }
+ const late=store();late.fail.lateRead=true;p=page({lang,local:late});p.allow();assert.equal(p.allowed(),false);assert.equal(p.checkbox.checked,false);assert.match(p.statuses[0].textContent,/remains off on this page|tetap nonaktif pada halaman ini/);
+ const shared=store(),a=page({lang,local:shared}),b=page({lang,local:shared});a.allow();b.event(shared.getItem(KEY));assert.equal(b.allowed(),true);a.deny();b.event(shared.getItem(KEY));assert.equal(b.runtime(),'denied');assert.equal(b.checkbox.checked,false);assert.match(b.statuses[0].textContent,/rejected|ditolak/);a.allow();b.event(shared.getItem(KEY));assert.equal(b.allowed(),false);assert.match(b.statuses[0].textContent,/this tab|tab ini/);b.allow();assert.equal(b.runtime(),'granted');assert.equal(b.scripts.length,1);
+ p=page({lang,local:store(new Map([[KEY,'malformed']]))});assert.equal(p.scripts.length,0);
+ console.log(`${lang}: PASS actual built initializer/control callbacks, initial denial, banner/form grant/refusal, existing-library regrant, old grant local/dual write failures, retained document and fresh session veto, independent local/session read failure, read-fail/write-ok no shared grant, failed/silent veto clearing, late-read effective feedback, separate-tab denial/UI, malformed state.`);
+}
